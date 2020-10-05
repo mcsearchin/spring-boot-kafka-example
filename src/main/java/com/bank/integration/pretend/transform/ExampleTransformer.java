@@ -10,4 +10,8 @@ public class ExampleTransformer {
     public ExternalModel toExternal(InternalModel internal) {
         return ExternalModel.builder().externalField(internal.getInternalField()).build();
     }
+
+    public InternalModel toInternal(ExternalModel external) {
+        return InternalModel.builder().internalField(external.getExternalField()).build();
+    }
 }
